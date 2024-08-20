@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shamiso Ent</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Inter%3A700%2C900&amp;display=swap">
+
+    <!-- Load Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Inter%3A700%2C900&amp;display=swap" rel="stylesheet">
+
+
+        <!-- Custom CSS -->
+    <style>
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .navbar .nav-link {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .navbar .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .navbar .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+
+        /* Carousel height */
+        .carousel-item {
+            height: 500px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .section-holder-border {
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .company-logos img {
+            width: 100px;
+            height: auto;
+            margin: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+
+        .faint-line {
+            width: 100%;
+            height: 1px;
+            background-color: lightgray;
+            margin: 20px 0;
+        }
+
+
+        .packages-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .packages-section h2 {
+            margin-bottom: 40px;
+        }
+
+        .package-card {
+            padding: 20px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .package-card:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .package-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .package-price {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .package-features li {
+            margin-bottom: 10px;
+        }
+
+        .package-button {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+
+         #customCarousel .carousel-item {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+    }
+    #customCarousel .carousel-item h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+
+
+        @keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+        .dropdown-menu {
+        min-width: 8rem; /* Adjust width to your preference */
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/shamiso.jpg" alt="Logo" width="100">
+        </a>
+
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Music Distribution</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promote.html">Music Promotion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="producers.html">Beat Selling</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Funding</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="music.html">Music Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                </li>
+                <!-- Language Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        en
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Xhosa</a></li>
+                        <li><a class="dropdown-item" href="#">Swahil</a></li>
+                        <!-- Add more languages as needed -->
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Login and Sign-Up buttons -->
+            <div class="d-flex">
+                <a href="#" class="btn btn-outline-primary me-2">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+       <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/bg-1.jpg" class="d-block w-100" alt="First Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/bg-3.jpg" class="d-block w-100" alt="Second Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/bg-7.jpg" class="d-block w-100" alt="Third Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Section for Logos -->
+    <div class="section-holder-border item-block item-absolute" data-at="section-border">
+        <h2>Distribute your songs to 50+ top music services</h2>
+        <div class="company-logos">
+            <img src="./assets/Spotify.png" alt="Company Logo 1">
+            <img src="./assets/Apple.png" alt="Company Logo 2">
+            <img src="./assets/" alt="Company Logo 3">
+            <img src="logo4.png" alt="Company Logo 4">
+            <img src="logo5.png" alt="Company Logo 5">
+            <img src="logo6.png" alt="Company Logo 6">
+            <img src="logo7.png" alt="Company Logo 7">
+            <img src="logo8.png" alt="Company Logo 8">
+        </div>
+
+        <div class="faint-line"></div>
+    </div>
+
+<!-- Packages Section -->
+<div class="packages-section">
+    <h2>A plan for every stage of your independence</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="package-card">
+                    <img src="./assets/Debut.webp" alt="Starter Plan" class="img-fluid">
+                    <h3 class="package-title">UNLEASH</h3>
+                    <p class="package-price">$1.67/month</p>
+                    <ul class="package-features">
+                        <li>One Artist</li>
+                        <li>Unlimited Releases</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary package-button">Choose Plan</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="package-card">
+                    <img src="./assets/Select.webp" alt="Pro Plan" class="img-fluid">
+                    <h3 class="package-title">MAESTRO</h3>
+                    <p class="package-price">$4/month</p>
+                    <ul class="package-features">
+                        <li>One Artist</li>
+                        <li>Unlimited Releases</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary package-button">Choose Plan</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="package-card">
+                    <img src="./assets/Partner.webp" alt="Enterprise Plan" class="img-fluid">
+                    <h3 class="package-title">LABELS</h3>
+                    <p class="package-price">$5.99/month</p>
+                    <ul class="package-features">
+                        <li>$35.99</li>
+                        <li>Unlimited Artists</li>
+                        <li>Unlimited Releases</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary package-button">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Carousel -->
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./logos/3m.svg" />
+        <img src="./logos/barstool-store.svg" />
+        <img src="./logos/budweiser.svg" />
+        <img src="./logos/buzzfeed.svg" />
+        <img src="./logos/forbes.svg" />
+        <img src="./logos/macys.svg" />
+        <img src="./logos/menshealth.svg" />
+        <img src="./logos/mrbeast.svg" />
+      </div>
+
+      <div class="logos-slide">
+        <img src="./logos/3m.svg" />
+        <img src="./logos/barstool-store.svg" />
+        <img src="./logos/budweiser.svg" />
+        <img src="./logos/buzzfeed.svg" />
+        <img src="./logos/forbes.svg" />
+        <img src="./logos/macys.svg" />
+        <img src="./logos/menshealth.svg" />
+        <img src="./logos/mrbeast.svg" />
+      </div>
+    </div>
+
+
+   <div class="black" style="background-color: black; padding: 20px; color: white; text-align: center;">
+    <!-- Logo -->
+    <img src="./assets/Shamiso_logo_Black.png" alt="Logo" class="mb-4" style="max-width: 150px;">
+
+    <!-- First Heading -->
+    <h1 class="display-4">Own your masters. Own your future.</h1>
+
+    <!-- Second Heading -->
+    <h3 class="mt-3">Artists choose UnitedMasters to power their independent music careers</h3>
+
+    <!-- List of Clickable Points -->
+    <ul class="list-unstyled mt-4">
+        <li><a href="#" class="text-white">Unlimited music distribution worldwide</a></li>
+        <li><a href="#" class="text-white">Release on over 50 top music services</a></li>
+        <li><a href="#" class="text-white">Exclusive brand & sync licensing deals</a></li>
+        <li><a href="#" class="text-white">Playlist, editorial and radio pitching</a></li>
+        <li><a href="#" class="text-white">Automated artist marketing campaigns</a></li>
+    </ul>
+
+    <!-- Learn More Button -->
+    <a href="#" class="btn btn-primary mt-4">Learn More</a>
+</div>
+
+
+    <div class="black" style="background-color: black; padding: 40px;">
+    <h1 class="text-center text-white">Digital Music Distribution FAQs</h1>
+    <div class="accordion mt-4" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    WHAT IS SHAMISO?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    Shamiso is a platform that provides artists with tools to distribute their music globally while retaining ownership of their masters.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    HOW DO YOU RELEASE MUSIC ON SHAMISO?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    To release music on Shamiso, you simply create an account, upload your tracks, and follow the submission process to distribute your music worldwide.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    DOES SHAMISO COPYRIGHT YOUR MUSIC?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    No, Shamiso does not copyright your music. The platform allows you to retain full ownership of your music and masters.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    HOW LONG DOES IT TAKE SHAMISO TO APPROVE A SONG?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    It typically takes 5-7 business days for Shamiso to review and approve a song for distribution.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    IS SHAMISO A RECORD LABEL?
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    No, Shamiso is not a record label. It is a music distribution platform that empowers artists to distribute their music independently.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    HOW MUCH DOES SHAMISO PAY PER STREAM?
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    The amount paid per stream varies depending on the platform and region. shamiso collects the royalties and pays them out to the artist.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" style="background-color: black; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    HOW DO YOU EDIT A RELEASE ON SHAMISO?
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-white" style="background-color: black;">
+                    You can edit a release on Shamiso by logging into your account, navigating to the release, and making the necessary changes before resubmitting.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
